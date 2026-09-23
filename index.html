@@ -10,16 +10,55 @@
 <body>
 
 ```
-<h1>Airrah Photobooth</h1>
+<!-- HOME SCREEN -->
+<div id="homeScreen">
 
-<p>My very first photobooth website! 📸</p>
+    <h1>Airrah Photobooth</h1>
 
-<button onclick="startPhotobooth()">START</button>
+    <p>Make a moment. Keep the frame. 📸</p>
+
+    <button onclick="startPhotobooth()">START</button>
+
+</div>
+
+
+<!-- PHOTOBOOTH SCREEN -->
+<div id="boothScreen" style="display: none;">
+
+    <h1>Choose Your Frame</h1>
+
+    <p>Welcome to the photobooth!</p>
+
+    <button>CLASSIC</button>
+    <button>FILM STRIP</button>
+    <button>MINIMAL</button>
+
+    <br><br>
+
+    <button onclick="goHome()">← BACK</button>
+
+</div>
+
 
 <script>
+
     function startPhotobooth() {
-        alert("Welcome to Airrah Photobooth! 📸");
+
+        document.getElementById("homeScreen").style.display = "none";
+
+        document.getElementById("boothScreen").style.display = "block";
+
     }
+
+
+    function goHome() {
+
+        document.getElementById("boothScreen").style.display = "none";
+
+        document.getElementById("homeScreen").style.display = "block";
+
+    }
+
 </script>
 ```
 
